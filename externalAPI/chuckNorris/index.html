@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="sytles.css">
+  <title>Chuck Norris Joke Generator</title>
+</head>
+
+<body>
+  <div class="container" id='ageVerifyContainer'>
+    <h1>You over 18?</h1>
+    <button id='btn18'>Yes</button>
+    <button id='btnNot18'>No</button>
+  </div>
+  <div class="container" id='mainContainer'>
+    <h1>Chuck Norris <span id='titleHighlight'>API</span> project...</h1>
+    <ul id='categoriesList'></ul>
+    <div id="buttonWrapper">
+      <div class="row">
+        <button id='singleJoke' class="one-half column">Get single single</button>
+        <form id='numberInputForm' class="one-half column">
+          <button id='multipleJokes' class='u-full-width'>Get multiple jokes</button>
+          <label class='dynamic'>How many?</label>
+          <input type="text" class='u-full-width dynamic' id='numberInputField'>
+          <input type="submit" class='dynamic button'>
+        </form>
+      </div>
+    </div>
+    <ul id='output'></ul>
+    <button id='clearBtn'>Clear Jokes</button>
+  </div>
+
+  <script src='main.js'></script>
+</body>
+
+</html>

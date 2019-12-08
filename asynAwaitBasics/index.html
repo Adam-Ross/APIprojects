@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>AsynAwait</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 id='title'>Async Await Basics</h1>
+    <h3>What is it...</h3>
+    <div class="explain">
+      <p>Asyn await is a part of the es2016 standard. If using it, might need to compile code down to es5 with webpack
+        and babble. Not sure about that yet, though</p>
+      <p>It is basically a way to write async code in a syncronous syntax. The code examples will be below.</p>
+    </div>
+
+    <div class="para">
+      <p>Adding async before a function, makes the function return a promise.</p>
+
+      <pre>
+        <code class="coder">
+          async function getName(name) {
+            return name;
+          }
+          
+          const name = getName("mike").then(name => {
+            console.log(name);
+          });
+        </code>
+      </pre>
+    </div>
+    <div class="para">
+      <p>So, basically, adding async before a function makes it return a promise automatically, without having to add
+        return new Promise of anything like that.</p>
+
+      <p>Then, you can use await to await the async action to write code in a syncronous way, without having to use
+        callbacks...</p>
+
+      <pre>
+        <code>
+          async function getName(name) {
+            const promise = new Promise((resolve, reject) => {
+              setTimeout(() => {
+                resolve(`hello ${name}`);
+              }, 2000);
+            });
+          
+            const res = await promise;
+            return res;
+          }
+          
+          getName("Mike").then(res => console.log(res));
+        </code>
+      </pre>
+      <p>So, if you want to catch errors, you can do that to.</p>
+      <pre>
+        <code>
+          async function getName(name) {
+            const promise = new Promise((resolve, reject) => {
+              setTimeout(() => {
+                resolve(`hello ${name}`);
+              }, 2000);
+            });
+          
+            const err = true;
+          
+            if (!err) {
+              const res = await promise;
+              return res;
+            } else {
+              await Promise.reject(new Error("Something went wrong"));
+            }
+          }
+          
+          getName("Mike")
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
+        </code>
+      </pre>
+      <p>But, the best case to use async await is with fetch, so let's do that, cause that's more in line with what it
+        will be being used for in production apps.</p>
+      <pre>
+        <code>
+          async function getPosts() {
+            const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+          
+            const data = await response.json();
+          
+            return data;
+          }
+          
+          getPosts().then(res => console.log(res));
+        </code>
+      </pre>
+      <p>This logic looks neater than adding the two .then's to handle promises...</p>
+    </div>
+  </div>
+
+  <script src='main.js'></script>
+</body>
+
+</html>

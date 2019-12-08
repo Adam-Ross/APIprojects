@@ -1,0 +1,17 @@
+[
+  {
+    "title": "post one",
+    "author": "Mike Right",
+    "body": "This is the body of post one"
+  },
+  {
+    "title": "post two",
+    "author": "Mike Jones",
+    "body": "This is the body of post two"
+  },
+  {
+    "title": "post three",
+    "author": "Mike Mikers",
+    "body": "This is the body of post three"
+  }
+]

@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=McLaren&display=swap");
+h1 {
+  text-align: center;
+  border-bottom: 5px solid #ccc;
+}
+
+#joke-list {
+  margin-top: 3rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+.listItem {
+  list-style: none;
+  font-size: 3rem;
+  background: #ccc;
+  padding: 1.4rem;
+  border-radius: 5px;
+  font-family: "McLaren", cursive;
+}

@@ -1,0 +1,30 @@
+* {
+  --main-bg-color: #fefcfa;
+  --black: #313639;
+  --grey: #c2c5cc;
+
+  background: var(--main-bg-color);
+  color: var(--black);
+}
+
+#title {
+  font-style: italic;
+  border-bottom: 1px solid var(--black);
+  font-size: 7rem;
+}
+
+.coder {
+  margin-top: -5rem;
+}
+
+.explain {
+  background: var(--grey);
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.explain p {
+  background: var(--grey);
+  border-radius: 5px;
+  font-size: 2rem;
+}

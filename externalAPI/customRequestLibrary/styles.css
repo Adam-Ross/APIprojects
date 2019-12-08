@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+}
+
+/* Main heading styles */
+#main-heading {
+  text-align: center;
+}
+
+#main-heading h1 {
+  display: inline-block;
+  border-bottom: 1px solid black;
+  margin-top: 3rem;
+  font-size: 4rem;
+}
+
+.flexContainer {
+  display: flex;
+}
+
+.container {
+  flex-grow: 1;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* Output */
+
+#output {
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.list-item {
+  font-size: 2rem;
+  margin: 1rem 0;
+  list-style: none;
+  transition: font-size 1s, color 1s;
+}
+
+.list-item:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  font-size: 2.2rem;
+  color: red;
+}
+
+#button-container {
+  text-align: center;
+}
+
+.collection-item h1 {
+  transition: opacity 1s, color 1s;
+  list-style: none;
+}
+
+.collection-item h1:hover {
+  color: red;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+#secondary {
+  display: none;
+}
